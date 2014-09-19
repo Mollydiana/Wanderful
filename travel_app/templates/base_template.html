@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+{#    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>#}
+    <link href='http://fonts.googleapis.com/css?family=Lato|Lobster' rel='stylesheet' type='text/css'>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -36,7 +37,7 @@
                     </li>
                     {% if user.is_authenticated %}
                     <li>
-                        <a class="page-scroll" href="#">my lists</a>
+                        <a class="page-scroll" href="{% url 'list_it' %}">my lists</a>
                     </li>
                     <li>
                             <a class="page-scroll" href="{% url 'profile' %}">profile</a>
@@ -46,7 +47,7 @@
                     </li>
                     {% else %}
                         <li>
-                            <a class="page-scroll" href="#">about</a>
+                            <a class="page-scroll" href="{% url 'about' %}">about</a>
                         </li>
                         <li>
                             <a class="page-scorll" href="{% url 'login' %}">Login</a>

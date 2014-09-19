@@ -15,6 +15,12 @@ def home(request):
 def profile(request):
     return render(request, 'profile.html')
 
+def about(request):
+    return render(request, 'about.html')
+
+def my_lists(request):
+    return render(request, 'lists/my_lists.html')
+
 
 def register(request):
     if request.method == 'POST':
@@ -23,7 +29,7 @@ def register(request):
             user = form.save()
             user.email_user("Welcome!", "Thank you for signing up for our website.")
             text_content = 'Thank you, {} for signing up for our website!'.format(user.username)
-            html_content = '<h2>Thanks, {} for signing up!</h2> <div>I hope you enjoy using our site</div>'.format(user.first_name)
+            html_content = '<h2>Thanks for signing up!</h2> <div>I hope you enjoy using our site</div>'
             msg = EmailMultiAlternatives("Welcome!", text_content, settings.DEFAULT_FROM_EMAIL, [user.email])
             msg.attach_alternative(html_content, "text/html")
             msg.send()

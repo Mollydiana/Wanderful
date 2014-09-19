@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'travel_app.views.home', name='home'),
     url(r'^profile/$', 'travel_app.views.profile', name='profile'),
+    url(r'^about/$', 'travel_app.views.about', name='about'),
+    url(r'^my_lists/$', 'travel_app.views.my_lists', name='my_lists'),
 
     url(r'^register/$', 'travel_app.views.register', name='register'),
     url(r'^login/$', 'django.contrib.auth.views.login', kwargs={'authentication_form': LoginForm}, name='login'),
