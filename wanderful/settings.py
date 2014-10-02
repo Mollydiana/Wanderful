@@ -96,12 +96,7 @@ AUTH_USER_MODEL = 'travel_app.Profile'
 
 #
 # EMAIL STUFF
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'Mollydiana@gmail.com'
-EMAIL_HOST_PASSWORD = '1F1ddler'
-EMAIL_PORT = 587
-DEFAULT_FROM_EMAIL = 'Mollydiana@gmail.com'
+
 
 try:
     from local_settings import *
